@@ -27,6 +27,173 @@
     <!-- /Aquí se insertará el header.html -->
     <app-header></app-header>
 
+    <main>
+      <!-- Cabecera -->
+      <div class="container">
+        <h1
+          class="text-center bg-warning text-white py-2 mb-4"
+          style="margin-top: 110px"
+        >
+          <i class="bi bi-trophy"></i> Liga IES Maestre de Calatrava
+        </h1>
+      </div>
+
+      <!-- CARRUKSEL -->
+      <section id="carousel">
+        <div class="container-fluid text-center mb-4">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-pause="false"
+            data-bs-keyboard="true"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="img/1-futbol.png"
+                  class="img-fluid"
+                  style="max-height: 800px"
+                  alt="imagen de fútbol"
+                />
+                <div class="carousel-caption">
+                  <h5>Noticias de Fútbol</h5>
+                  <p>
+                    Pulsa el botón para obtener mayor información sobre los
+                    eventos.
+                  </p>
+                  <button
+                    class="btn btn-warning btn-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#footballModal"
+                  >
+                    <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/2-baloncesto.png"
+                  class="img-fluid"
+                  style="max-height: 800px"
+                  alt="imagen de baloncesto"
+                />
+                <div class="carousel-caption">
+                  <h5>Noticias Baloncesto</h5>
+                  <p>
+                    Pulsa el botón para obtener mayor información sobre los
+                    eventos.
+                  </p>
+                  <button
+                    class="btn btn-warning btn-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#basketballModal"
+                  >
+                    <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/3-padel.png"
+                  class="img-fluid"
+                  style="max-height: 800px"
+                  alt="imagen de pádel"
+                />
+                <div class="carousel-caption">
+                  <h5>Noticias Pádel</h5>
+                  <p>
+                    Pulsa el botón para obtener mayor información sobre los
+                    eventos.
+                  </p>
+                  <button
+                    class="btn btn-warning btn-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#padelModal"
+                  >
+                    <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+                  </button>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="img/4-atletismo.png"
+                  class="img-fluid"
+                  style="max-height: 800px"
+                  alt="imagen de atletismo"
+                />
+                <div class="carousel-caption">
+                  <h5>Noticias de Atletismo</h5>
+                  <p>
+                    Pulsa el botón para obtener mayor información sobre los
+                    eventos.
+                  </p>
+                  <button
+                    class="btn btn-warning btn-lg"
+                    data-bs-toggle="modal"
+                    data-bs-target="#atletismoModal"
+                  >
+                    <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon custom-carousel-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon custom-carousel-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <!-- Contador centrado abajo, necesita JavaScript adicional -->
+            <div
+              id="carousel-counter"
+              class="position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 bg-info text-white rounded small"
+            >
+              1 / 4
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const carouselEl = document.getElementById(
+              "carouselExampleAutoplaying",
+            );
+            const counterEl = document.getElementById("carousel-counter");
+            const totalSlides =
+              carouselEl.querySelectorAll(".carousel-item").length;
+
+            // Inicializar contador
+            counterEl.textContent = `1 / ${totalSlides}`;
+
+            // Escuchar evento de Bootstrap
+            carouselEl.addEventListener("slid.bs.carousel", function (event) {
+              const currentIndex = event.to + 1; // event.to es índice base 0
+              counterEl.textContent = `${currentIndex} / ${totalSlides}`;
+            });
+          });
+        </script>
+      </section>
+      <!-- /CARRUSEL -->
+    </main>
+
     <!-- /Aquí se insertará el footer.html -->
     <app-footer></app-footer>
 
