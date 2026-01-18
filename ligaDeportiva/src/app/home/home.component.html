@@ -1,1 +1,777 @@
-<p>home works!</p>
+<main>
+  <!-- Cabecera -->
+  <div class="container">
+    <h1
+      class="text-center bg-warning text-white py-2 mb-4"
+      style="margin-top: 110px"
+    >
+      <i class="bi bi-trophy"></i> Liga IES Maestre de Calatrava
+    </h1>
+  </div>
+
+  <!-- CARRUKSEL -->
+  <section id="carousel">
+    <div class="container-fluid text-center mb-4">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-pause="false"
+        data-bs-keyboard="true"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="assets/img/1-futbol.png"
+              class="img-fluid"
+              style="max-height: 800px"
+              alt="imagen de fútbol"
+            />
+            <div class="carousel-caption">
+              <h5>Noticias de Fútbol</h5>
+              <p>
+                Pulsa el botón para obtener mayor información sobre los eventos.
+              </p>
+              <button
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#footballModal"
+              >
+                <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/2-baloncesto.png"
+              class="img-fluid"
+              style="max-height: 800px"
+              alt="imagen de baloncesto"
+            />
+            <div class="carousel-caption">
+              <h5>Noticias Baloncesto</h5>
+              <p>
+                Pulsa el botón para obtener mayor información sobre los eventos.
+              </p>
+              <button
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#basketballModal"
+              >
+                <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/3-padel.png"
+              class="img-fluid"
+              style="max-height: 800px"
+              alt="imagen de pádel"
+            />
+            <div class="carousel-caption">
+              <h5>Noticias Pádel</h5>
+              <p>
+                Pulsa el botón para obtener mayor información sobre los eventos.
+              </p>
+              <button
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#padelModal"
+              >
+                <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/4-atletismo.png"
+              class="img-fluid"
+              style="max-height: 800px"
+              alt="imagen de atletismo"
+            />
+            <div class="carousel-caption">
+              <h5>Noticias de Atletismo</h5>
+              <p>
+                Pulsa el botón para obtener mayor información sobre los eventos.
+              </p>
+              <button
+                class="btn btn-warning btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#atletismoModal"
+              >
+                <i class="bi bi-newspaper me-2"></i>Leer Noticia Completa
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon custom-carousel-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon custom-carousel-icon"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Contador centrado abajo, necesita JavaScript adicional -->
+        <div
+          id="carousel-counter"
+          class="position-absolute bottom-0 start-50 translate-middle-x mb-2 px-3 py-1 bg-info text-white rounded small"
+        >
+          1 / 4
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carouselEl = document.getElementById(
+          "carouselExampleAutoplaying",
+        );
+        const counterEl = document.getElementById("carousel-counter");
+        const totalSlides =
+          carouselEl.querySelectorAll(".carousel-item").length;
+
+        // Inicializar contador
+        counterEl.textContent = `1 / ${totalSlides}`;
+
+        // Escuchar evento de Bootstrap
+        carouselEl.addEventListener("slid.bs.carousel", function (event) {
+          const currentIndex = event.to + 1; // event.to es índice base 0
+          counterEl.textContent = `${currentIndex} / ${totalSlides}`;
+        });
+      });
+    </script>
+  </section>
+  <!-- /CARRUSEL -->
+
+  <!-- MODALES provenientes del Carrusel -->
+  <section id="modales">
+    <!-- News Modals -->
+    <!-- Football Modal -->
+    <div
+      class="modal fade"
+      id="footballModal"
+      tabindex="-1"
+      aria-labelledby="footballModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning">
+            <h5 class="modal-title" id="footballModalLabel">
+              <i class="bi bi-circle-fill me-2"></i>Fútbol: Nueva Temporada
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img/1-futbol.png"
+              class="img-fluid rounded mb-3"
+              alt="Fútbol"
+            />
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">Fútbol</span>
+              <small class="text-muted"
+                ><i class="bi bi-calendar me-1"></i>15 de Enero, 2025</small
+              >
+            </div>
+            <h4 class="bg-warning">
+              El equipo de fútbol del instituto inicia la nueva temporada
+            </h4>
+            <p class="lead">
+              Con grandes expectativas y nuevos refuerzos, el equipo de fútbol
+              del IES Maestre de Calatrava se prepara para una temporada llena
+              de emociones.
+            </p>
+
+            <h5 class="bg-warning-subtle py-1">Nuevos Jugadores</h5>
+            <p>
+              Esta temporada contamos con la incorporación de tres nuevos
+              jugadores que fortalecerán significativamente nuestra plantilla:
+            </p>
+            <ul>
+              <li>
+                <strong>Carlos Martínez</strong> - Delantero centro, procedente
+                del equipo juvenil
+              </li>
+              <li>
+                <strong>Ana García</strong> - Defensa central, con experiencia
+                en equipos regionales
+              </li>
+              <li>
+                <strong>Miguel Rodríguez</strong> - Mediocampista, especialista
+                en pases largos
+              </li>
+            </ul>
+
+            <h5 class="bg-warning-subtle py-1">Objetivos de la Temporada</h5>
+            <p>
+              El entrenador, José Luis Fernández, ha establecido objetivos
+              claros para esta temporada:
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card bg-light">
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      <i class="bi bi-trophy me-2"></i>Objetivo Principal
+                    </h6>
+                    <p class="card-text">
+                      Clasificarse para la fase regional del campeonato escolar.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card bg-light">
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      <i class="bi bi-people me-2"></i>Desarrollo
+                    </h6>
+                    <p class="card-text">
+                      Fomentar el trabajo en equipo y el fair play entre todos
+                      los jugadores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="bg-warning-subtle py-1">Próximos Partidos</h5>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="bg-success-subtle py-1">Fecha</th>
+                    <th class="bg-success-subtle py-1">Rival</th>
+                    <th class="bg-success-subtle py-1">Lugar</th>
+                    <th class="bg-success-subtle py-1">Hora</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>22 de Enero</td>
+                    <td>IES Alonso Quijano</td>
+                    <td>Casa</td>
+                    <td>16:00</td>
+                  </tr>
+                  <tr>
+                    <td>29 de Enero</td>
+                    <td>IES San Juan</td>
+                    <td>Fuera</td>
+                    <td>16:30</td>
+                  </tr>
+                  <tr>
+                    <td>5 de Febrero</td>
+                    <td>IES Cervantes</td>
+                    <td>Casa</td>
+                    <td>16:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>Información importante:</strong> Los entrenamientos se
+              realizan los martes y jueves de 16:00 a 18:00 en el campo de
+              fútbol del instituto.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Compartir Noticia
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Basketball Modal -->
+    <div
+      class="modal fade"
+      id="basketballModal"
+      tabindex="-1"
+      aria-labelledby="basketballModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="basketballModalLabel">
+              <i class="bi bi-circle-fill me-2"></i>Baloncesto: Campeonato
+              Regional
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img/2-baloncesto.png"
+              class="img-fluid rounded mb-3"
+              alt="Baloncesto"
+            />
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning">Baloncesto</span>
+              <small class="text-muted"
+                ><i class="bi bi-calendar me-1"></i>12 de Enero, 2025</small
+              >
+            </div>
+            <h4>
+              Nuestro equipo de baloncesto se prepara para el campeonato
+              regional
+            </h4>
+            <p class="lead">
+              Los entrenamientos intensivos están dando sus frutos y el equipo
+              muestra un gran nivel de juego.
+            </p>
+
+            <h5>Preparación Intensiva</h5>
+            <p>
+              Durante las últimas semanas, el equipo ha incrementado
+              significativamente la intensidad de los entrenamientos:
+            </p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="text-center p-3 bg-light rounded">
+                  <i
+                    class="bi bi-clock sports-icon"
+                    style="font-size: 2rem"
+                  ></i>
+                  <h6 class="mt-2">Horas de Entrenamiento</h6>
+                  <p class="mb-0"><strong>8 horas/semana</strong></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-center p-3 bg-light rounded">
+                  <i
+                    class="bi bi-people sports-icon-orange"
+                    style="font-size: 2rem"
+                  ></i>
+                  <h6 class="mt-2">Jugadores Activos</h6>
+                  <p class="mb-0"><strong>12 jugadores</strong></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-center p-3 bg-light rounded">
+                  <i
+                    class="bi bi-trophy sports-icon"
+                    style="font-size: 2rem"
+                  ></i>
+                  <h6 class="mt-2">Partidos Ganados</h6>
+                  <p class="mb-0"><strong>7 de 8</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <h5>Jugadores Destacados</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      <i class="bi bi-star-fill text-warning me-2"></i>María
+                      López
+                    </h6>
+                    <p class="card-text">
+                      Base con excelente visión de juego y precisión en el tiro
+                      exterior.
+                    </p>
+                    <small class="text-muted"
+                      >Promedio: 18 puntos por partido</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      <i class="bi bi-star-fill text-warning me-2"></i>David
+                      Ruiz
+                    </h6>
+                    <p class="card-text">
+                      Pívot dominante en la pintura con gran capacidad
+                      defensiva.
+                    </p>
+                    <small class="text-muted"
+                      >Promedio: 12 rebotes por partido</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h5>Calendario del Campeonato</h5>
+            <div class="alert alert-success">
+              <i class="bi bi-calendar-check me-2"></i>
+              <strong>Fase de Grupos:</strong> Del 20 al 28 de Febrero<br />
+              <strong>Fase Final:</strong> Del 5 al 12 de Marzo<br />
+              <strong>Final:</strong> 15 de Marzo en el Pabellón Municipal
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Compartir Noticia
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Padel Modal -->
+    <div
+      class="modal fade"
+      id="padelModal"
+      tabindex="-1"
+      aria-labelledby="padelModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="padelModalLabel">
+              <i class="bi bi-circle-fill me-2"></i>Pádel: Torneo Intercentros
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img/3-padel.png"
+              class="img-fluid rounded mb-3"
+              alt="pádel"
+            />
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-success">pádel</span>
+              <small class="text-muted"
+                ><i class="bi bi-calendar me-1"></i>10 de Enero, 2025</small
+              >
+            </div>
+            <h4>
+              El equipo de pádel femenino participará en el torneo intercentros
+            </h4>
+            <p class="lead">
+              Una oportunidad única para demostrar el talento y la dedicación de
+              nuestras jugadoras en el pádel.
+            </p>
+
+            <h5>Participantes del Torneo</h5>
+            <p>
+              El torneo contará con la participación de 8 institutos de la
+              provincia:
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-group">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    IES Maestre de Calatrava
+                    <span class="badge bg-primary rounded-pill">Nosotros</span>
+                  </li>
+                  <li class="list-group-item">IES Alonso Quijano</li>
+                  <li class="list-group-item">IES San Juan</li>
+                  <li class="list-group-item">IES Cervantes</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-group">
+                  <li class="list-group-item">IES García Lorca</li>
+                  <li class="list-group-item">IES Velázquez</li>
+                  <li class="list-group-item">IES Goya</li>
+                  <li class="list-group-item">IES Picasso</li>
+                </ul>
+              </div>
+            </div>
+
+            <h5>Formato de Competición</h5>
+            <div class="card bg-light">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="bi bi-diagram-3 me-2"></i>Sistema de Competición
+                </h6>
+                <p class="card-text mb-2">
+                  <strong>Fase de Grupos:</strong> 2 grupos de 4 equipos cada
+                  uno
+                </p>
+                <p class="card-text mb-2">
+                  <strong>Partidos:</strong> Al mejor de 3 sets
+                </p>
+                <p class="card-text mb-0">
+                  <strong>Final:</strong> Los primeros de cada grupo se
+                  enfrentan en la final
+                </p>
+              </div>
+            </div>
+
+            <h5>Nuestro Equipo</h5>
+            <p>
+              El equipo está formado por 12 jugadoras de diferentes cursos,
+              todas con gran motivación:
+            </p>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 85%"
+                aria-valuenow="85"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Preparación Física: 85%
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                style="width: 90%"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Técnica Individual: 90%
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Trabajo en Equipo: 80%
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              <strong>Recordatorio:</strong> El torneo se celebrará el próximo
+              sábado 25 de enero en el Pabellón Municipal de Ciudad Real.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Compartir Noticia
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atletismo Modal -->
+    <div
+      class="modal fade"
+      id="atletismoModal"
+      tabindex="-1"
+      aria-labelledby="atletismoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="atletismoModalLabel">
+              <i class="bi bi-stopwatch-fill me-2"></i>Atletismo: Liga Escolar
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img/4-atletismo.png"
+              class="img-fluid rounded mb-3"
+              alt="Atletismo"
+            />
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning">Atletismo</span>
+              <small class="text-muted"
+                ><i class="bi bi-calendar me-1"></i>8 de Enero, 2025</small
+              >
+            </div>
+            <h4>
+              El equipo de atletismo femenino domina las pruebas de velocidad
+            </h4>
+            <p class="lead">
+              Una jornada llena de energía, superación y récords personales en
+              cada disciplina.
+            </p>
+
+            <h5>Clasificación por Puntos</h5>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Pos.</th>
+                    <th>Instituto</th>
+                    <th>100m</th>
+                    <th>400m</th>
+                    <th>Salto</th>
+                    <th>Lanzamiento</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <td>1º</td>
+                    <td><strong>IES Maestre de Calatrava</strong></td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td><strong>34</strong></td>
+                  </tr>
+                  <tr>
+                    <td>2º</td>
+                    <td>IES Alonso Quijano</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>3º</td>
+                    <td>IES San Juan</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>4º</td>
+                    <td>IES Cervantes</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>22</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h5>Estadísticas del Equipo</h5>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                  <h4 class="text-success">12.4s</h4>
+                  <small>100m femenino</small>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                  <h4 class="text-info">56.8s</h4>
+                  <small>400m masculino</small>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                  <h4 class="text-warning">5.2m</h4>
+                  <small>Salto de longitud</small>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                  <h4 class="text-danger">11.3m</h4>
+                  <small>Lanzamiento de peso</small>
+                </div>
+              </div>
+            </div>
+
+            <h5>Próximas Pruebas</h5>
+            <div class="card bg-light">
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <strong>vs IES García Lorca</strong>
+                  <span class="badge bg-primary">Pista Local</span>
+                </div>
+                <small class="text-muted"
+                  >20 de Enero - 10:00 - Estadio Municipal</small
+                >
+              </div>
+            </div>
+
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>¡Apóyalas desde las gradas!</strong> Cada prueba es una
+              oportunidad para batir marcas y celebrar el esfuerzo.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Compartir Noticia
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /MODALES provenientes del Carrusel -->
+</main>

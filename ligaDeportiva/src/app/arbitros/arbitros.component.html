@@ -1,1 +1,191 @@
-<p>arbitros works!</p>
+<!-- ÁRBITROS -->
+<section class="container py-5" id="arbitros">
+  <h2 class="text-center mb-4 bg-success text-white py-2">
+    <i class="bi bi-emoji-expressionless"></i> árbitros
+  </h2>
+
+  <!-- Filtro por nombre o atributo -->
+  <form class="mb-4">
+    <div class="row g-2 justify-content-center">
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar por nombre o número de colegiado"
+          disabled
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-warning" disabled>Buscar</button>
+      </div>
+    </div>
+    <p class="text-muted text-center mt-2">
+      * Funcionalidad de búsqueda pendiente de activación, se necesita
+      JavaScript
+    </p>
+  </form>
+
+  <!-- Tarjetas de arbitros -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <!-- Arbitro 1 -->
+    <div class="col">
+      <div class="card card-hover h-100">
+        <img src="assets/img/a1.jpg" class="card-img-top p-2" alt="Arbitro 1" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Pierre Luigi Colino</h5>
+          <p class="card-text">RFIF</p>
+          <button
+            type="button"
+            class="btn btn-outline-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#modalArbitro1"
+          >
+            Ver perfil
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Arbitro 2 -->
+    <div class="col">
+      <div class="card card-hover h-100">
+        <img src="assets/img/a2.jpg" class="card-img-top p-2" alt="Arbitro 2" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Jacques Cousteau</h5>
+          <p class="card-text">RFFF</p>
+          <button
+            type="button"
+            class="btn btn-outline-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#modalArbitro2"
+          >
+            Ver perfil
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Arbitro 3 -->
+    <div class="col">
+      <div class="card card-hover h-100">
+        <img src="assets/img/a3.jpg" class="card-img-top p-2" alt="Arbitro 3" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Sonia García</h5>
+          <p class="card-text">RFEF</p>
+          <button
+            type="button"
+            class="btn btn-outline-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#modalArbitro3"
+          >
+            Ver perfil
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Arbitro 1 -->
+  <div
+    class="modal fade"
+    id="modalArbitro1"
+    tabindex="-1"
+    aria-labelledby="modalArbitro1Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title" id="modalArbitro1Label">
+            Pierre Luigi Colino
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Edad:</strong> 44 años</p>
+          <p><strong>Federado desde:</strong> 12/07/1998</p>
+          <p><strong>Pais:</strong> Italia</p>
+          <hr />
+          <p><strong>Estadísticas:</strong></p>
+          <ul>
+            <li>Partidos: 201</li>
+            <li>Tarjetas amarillas: 57</li>
+            <li>Tarjetas rojas: 12</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Arbitro 2 -->
+  <div
+    class="modal fade"
+    id="modalArbitro2"
+    tabindex="-1"
+    aria-labelledby="modalArbitro2Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title" id="modalArbitro2Label">Jacques Cousteau</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Edad:</strong> 37 años</p>
+          <p><strong>Federado desde:</strong> 02/10/2001</p>
+          <p><strong>Pais:</strong> Francia</p>
+          <hr />
+          <p><strong>Estadísticas:</strong></p>
+          <ul>
+            <li>Partidos: 156</li>
+            <li>Tarjetas amarillas: 45</li>
+            <li>Tarjetas rojas: 23</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Arbitro 3 -->
+  <div
+    class="modal fade"
+    id="modalArbitro3"
+    tabindex="-1"
+    aria-labelledby="modalArbitro3Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title" id="modalArbitro3Label">Sonia García</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Edad:</strong> 30 años</p>
+          <p><strong>Federada desde:</strong> 12/07/2012</p>
+          <p><strong>Pais:</strong> España</p>
+          <hr />
+          <p><strong>Estadísticas:</strong></p>
+          <ul>
+            <li>Partidos: 56</li>
+            <li>Tarjetas amarillas: 12</li>
+            <li>Tarjetas rojas: 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /ÁRBITROS -->

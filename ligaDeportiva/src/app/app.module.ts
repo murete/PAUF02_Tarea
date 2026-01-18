@@ -11,6 +11,8 @@ import { ClasificacionesComponent } from './clasificaciones/clasificaciones.comp
 import { ArbitrosComponent } from './arbitros/arbitros.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { HomeComponent } from './home/home.component';
+import { ResultadosComponent } from './resultados/resultados.component';
+import { InscripcionesComponent } from './inscripciones/inscripciones.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HomeComponent } from './home/home.component';
     ClasificacionesComponent,
     ArbitrosComponent,
     ContactoComponent,
-    HomeComponent
+    HomeComponent,
+    ResultadosComponent,
+    InscripcionesComponent
   ],
   imports: [
     BrowserModule

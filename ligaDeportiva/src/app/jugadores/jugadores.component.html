@@ -1,1 +1,584 @@
-<p>jugadores works!</p>
+<!-- JUGADORES 2 VERSION -->
+<!-- /RESULTADOS -->
+<!-- CLASIFICACIONES -->
+<section class="container pt-5" id="jugadores">
+  <h2 class="text-center mb-4 bg-success text-white py-2">
+    <i class="bi bi-list-ol"></i> jugadores
+  </h2>
+
+  <!-- Filtro por competición -->
+  <ul
+    class="nav nav-pills justify-content-center mb-4"
+    id="clasificacionTabs"
+    role="tablist"
+  >
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="porteros-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#porteros"
+        type="button"
+        role="tab"
+        aria-controls="porteros"
+        aria-selected="true"
+      >
+        Porteros
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="defensas-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#defensas"
+        type="button"
+        role="tab"
+        aria-controls="defensas"
+        aria-selected="false"
+      >
+        Defensas
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="centrocampistas-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#centrocampistas"
+        type="button"
+        role="tab"
+        aria-controls="centrocampistas"
+        aria-selected="false"
+      >
+        Centrocampistas
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="delanteros-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#delanteros"
+        type="button"
+        role="tab"
+        aria-controls="atletismo"
+        aria-selected="false"
+      >
+        Delanteros
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="clasificacionTabsContent">
+    <div
+      class="tab-pane fade show active"
+      id="porteros"
+      role="tabpanel"
+      aria-labelledby="porteros-tab"
+    >
+      <!-- Tarjetas de jugadores -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Portero 1 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sp1.png" class="card-img-top p-3" alt="Jugador 1" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Odysseas Vlachodimos</h5>
+              <p class="card-text">Portero - Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador1"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Portero 2 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sp13.png" class="card-img-top p-3" alt="Jugador 1" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Odysseas Vlachodimos</h5>
+              <p class="card-text">Portero - Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador1"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Portero 3 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sp25.png" class="card-img-top p-3" alt="Jugador 1" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Odysseas Vlachodimos</h5>
+              <p class="card-text">Portero - Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador1"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Portero 4 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/p31.png" class="card-img-top p-3" alt="Jugador 1" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Odysseas Vlachodimos</h5>
+              <p class="card-text">Portero - Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador1"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Defensas -->
+    <div
+      class="tab-pane fade show"
+      id="defensas"
+      role="tabpanel"
+      aria-labelledby="defensas-tab"
+    >
+      <!-- Tarjetas de jugadores -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Defensa 1 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd2.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">José Ángel Carmona Navarro</h5>
+              <p class="card-text">Defensa - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador2"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Defensa 2 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd3.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Defensa - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador2"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Defensa 3 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd4.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Defensa - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador2"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Defensa 4 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd5.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Defensa - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador2"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Centrocampistas -->
+    <div
+      class="tab-pane fade show"
+      id="centrocampistas"
+      role="tabpanel"
+      aria-labelledby="centrocampistas-tab"
+    >
+      <!-- Tarjetas de jugadores -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Centrocampista 1 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sc6.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Nemanja Gudelj</h5>
+              <p class="card-text">Centrocampista - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador3"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Centrocampista 2 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sc8.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Centrocampista - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador3"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Centrocampista 3 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sc11.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Centrocampista - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador3"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Centrocampista 4 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sc16.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Centrocampista - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador3"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delanteros -->
+    <div
+      class="tab-pane fade show"
+      id="delanteros"
+      role="tabpanel"
+      aria-labelledby="delanteros-tab"
+    >
+      <!-- Tarjetas de jugadores -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Delantero 1 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd7.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Delantero - IES Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador4"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Delantero 2 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd9.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Delantero - IES Cervantes</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador4"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Delantero 3 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd10.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Delantero - IES Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador4"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Delantero 4 -->
+        <div class="col">
+          <div class="card card-hover h-100">
+            <img src="assets/img/sd14.png" class="card-img-top p-3" alt="Jugador 3" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Isaac Romero Bernal</h5>
+              <p class="card-text">Delantero - IES Maestre de Calatrava</p>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-bs-toggle="modal"
+                data-bs-target="#modalJugador4"
+              >
+                Ver perfil
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal jugador 1 -->
+    <div
+      class="modal fade"
+      id="modalJugador1"
+      tabindex="-1"
+      aria-labelledby="modalJugador1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title" id="modalJugador1Label">
+              Odysseas Vlachodimos
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Edad:</strong> 31 años</p>
+            <p><strong>Estatura:</strong> 188 cm</p>
+            <p><strong>Peso:</strong> 78 kg</p>
+            <p><strong>Nacionalidad:</strong> Griega</p>
+            <p><strong>Posición:</strong> Portero</p>
+            <p><strong>Equipo:</strong> IES Maestre de Calatrava</p>
+            <hr />
+            <p><strong>Estadísticas:</strong></p>
+            <ul>
+              <li>Minutos jugados: 540</li>
+              <li>Partidos jugados: 6</li>
+              <li>Goles: 0</li>
+              <li>Paradas: 24</li>
+              <li>Asistencias: 0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Jugador 2 -->
+    <div
+      class="modal fade"
+      id="modalJugador2"
+      tabindex="-1"
+      aria-labelledby="modalJugador2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title" id="modalJugador2Label">
+              José Ángel Carmona Navarro
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Edad:</strong> 36 años</p>
+            <p><strong>Estatura:</strong> 188 cm</p>
+            <p><strong>Peso:</strong> 78 kg</p>
+            <p><strong>Nacionalidad:</strong> Griega</p>
+            <p><strong>Posición:</strong> Defensa</p>
+            <p><strong>Equipo:</strong> IES Maestre de Calatrava</p>
+            <hr />
+            <p><strong>Estadísticas:</strong></p>
+            <ul>
+              <li>Minutos jugados: 453</li>
+              <li>Partidos jugados: 6</li>
+              <li>Goles: 0</li>
+              <li>Paradas: 0</li>
+              <li>Asistencias: 0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Jugador 3 -->
+    <div
+      class="modal fade"
+      id="modalJugador3"
+      tabindex="-1"
+      aria-labelledby="modalJugador3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title" id="modalJugador3Label">Nemanja Gudelj</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Edad:</strong> 34 años</p>
+            <p><strong>Estatura:</strong> 187 cm</p>
+            <p><strong>Peso:</strong> 79 kg</p>
+            <p><strong>Nacionalidad:</strong> Rusia</p>
+            <p><strong>Posición:</strong> Centrocampista</p>
+            <p><strong>Equipo:</strong> IES Cervantes</p>
+            <hr />
+            <p><strong>Estadísticas:</strong></p>
+            <ul>
+              <li>Minutos jugados: 528</li>
+              <li>Partidos jugados: 8</li>
+              <li>Goles: 1</li>
+              <li>Paradas: 0</li>
+              <li>Asistencias: 0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Jugador 4 -->
+    <div
+      class="modal fade"
+      id="modalJugador4"
+      tabindex="-1"
+      aria-labelledby="modalJugador4Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title" id="modalJugador4Label">
+              Isaac Romero Bernan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Edad:</strong> 25 años</p>
+            <p><strong>Estatura:</strong> 184 cm</p>
+            <p><strong>Peso:</strong> 70 kg</p>
+            <p><strong>Nacionalidad:</strong> España</p>
+            <p><strong>Posición:</strong> Delantero</p>
+            <p><strong>Equipo:</strong> IES Maestre de Calatrava</p>
+            <hr />
+            <p><strong>Estadísticas:</strong></p>
+            <ul>
+              <li>Minutos jugados: 553</li>
+              <li>Partidos jugados: 9</li>
+              <li>Goles: 3</li>
+              <li>Paradas: 0</li>
+              <li>Asistencias: 0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efectos en las tarjetas -->
+    <style>
+      .card-hover {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </div>
+</section>
+<!-- /JUGADORES -->

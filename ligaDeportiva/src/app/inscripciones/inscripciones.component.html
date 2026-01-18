@@ -1,0 +1,177 @@
+<!-- INSCRIPCIONES -->
+<div class="container text-center">
+  <h2 class="mb-4 bg-success text-white py-2">
+    <i class="bi bi-pencil"></i> INSCRIPCIONES
+  </h2>
+  <p class="lead text-muted">
+    ¿Quieres formar parte de un equipo? No dudes en inscribirte
+  </p>
+  <!-- Botón para abrir el modal del formulario -->
+  <button
+    type="button"
+    class="btn btn-warning mb-5"
+    data-bs-toggle="modal"
+    data-bs-target="#inscripcionFormModal"
+  >
+    ¡ INSCRÍBETE !
+  </button>
+</div>
+
+<!-- Modal con el formulario -->
+<div
+  class="modal fade"
+  id="inscripcionFormModal"
+  tabindex="-1"
+  aria-labelledby="inscripcionFormModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form
+        id="inscripcionForm"
+        class="border-0 p-4 bg-light needs-validation"
+        novalidate
+      >
+        <div class="modal-header">
+          <h5 class="modal-title" id="inscripcionFormModalLabel">
+            <i class="bi bi-pencil-square me-2"></i> Rellena el formulario
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <!-- Línea 1 -->
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+          </div>
+
+          <!-- Línea 2 -->
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="motivo" class="form-label">Deporte</label>
+              <select class="form-select" id="motivo" required>
+                <option selected disabled value="">Elige un deporte</option>
+                <option>Fútbol</option>
+                <option>Baloncesto</option>
+                <option>Pádel</option>
+                <option>Atletismo</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" />
+            </div>
+          </div>
+
+          <!-- Línea 3 -->
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Observaciones</label>
+            <textarea
+              class="form-control"
+              id="mensaje"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Línea 4 -->
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="privacidad"
+              required
+            />
+            <label class="form-check-label" for="privacidad">
+              Acepto la
+              <a href="#" class="text-decoration-underline"
+                >política de privacidad y tratamiento de datos personales.</a
+              >.
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning">
+            <i class="bi-send"></i> Enviar inscripción
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación -->
+<div
+  class="modal fade"
+  id="inscripcionConfirmModal"
+  tabindex="-1"
+  aria-labelledby="inscripcionConfirmModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-body p-4">
+        <i class="bi bi-check-circle-fill text-success fs-1 mb-3"></i>
+        <h5 class="bi-send mb-0">Mensaje enviado</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Validación y cierre automático del modal -->
+<script>
+  const form = document.getElementById("inscripcionForm");
+  const inscripcionFormModal = document.getElementById("inscripcionFormModal");
+  const inscripcionConfirmModalEl = document.getElementById(
+    "inscripcionConfirmModal",
+  );
+  const inscripcionConfirmModal = new bootstrap.Modal(
+    inscripcionConfirmModalEl,
+    { backdrop: false },
+  ); // sin backdrop
+
+  // Hace que se active el campo 'nombre' del formulario
+  inscripcionFormModal.addEventListener("shown.bs.modal", () => {
+    const firstInput = form.querySelector("input, select, textarea");
+    if (firstInput) firstInput.focus();
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (form.checkValidity()) {
+      // Cierra el modal del formulario
+      bootstrap.Modal.getInstance(inscripcionFormModal).hide();
+      form.reset();
+      form.classList.remove("was-validated");
+
+      // Muestra el modal de confirmación
+      inscripcionConfirmModal.show();
+
+      // Cierra el modal de confirmación tras 2 segundos
+      setTimeout(() => {
+        inscripcionConfirmModal.hide();
+
+        // Elimina manualmente el backdrop si quedó activo
+        const backdrops = document.querySelectorAll(".modal-backdrop");
+        backdrops.forEach((b) => b.remove());
+      }, 2000);
+    } else {
+      form.classList.add("was-validated");
+    }
+  });
+</script>
+<!-- /INSCRIPCIONES -->
