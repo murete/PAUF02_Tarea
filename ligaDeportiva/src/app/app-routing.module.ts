@@ -9,6 +9,11 @@ import { ArbitrosComponent } from './arbitros/arbitros.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { InscripcionesComponent } from './inscripciones/inscripciones.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { LoginComponent } from './login/login.component';
+import { IndexUsuarioComponent } from './index-usuario/index-usuario.component';
+import { IndexAdministradorComponent } from './index-administrador/index-administrador.component';
+import { IndexCapitanComponent } from './index-capitan/index-capitan.component';
+import { IndexArbitroComponent } from './index-arbitro/index-arbitro.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/noticias', pathMatch: 'full' }, // Página principal redirige a noticias
@@ -20,6 +25,11 @@ export const routes: Routes = [
   { path: 'arbitros', component: ArbitrosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'inscripciones', component: InscripcionesComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'index-usuario', component: IndexUsuarioComponent },
+  { path: 'index-administrador', component: IndexAdministradorComponent },
+  { path: 'index-capitan', component: IndexCapitanComponent },
+  { path: 'index-arbitro', component: IndexArbitroComponent },
   { path: '**', redirectTo: '/noticias' } // Ruta por defecto
 ];
 

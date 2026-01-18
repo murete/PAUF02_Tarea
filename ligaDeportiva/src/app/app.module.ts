@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,11 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { HomeComponent } from './home/home.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { InscripcionesComponent } from './inscripciones/inscripciones.component';
+import { LoginComponent } from './login/login.component';
+import { IndexUsuarioComponent } from './index-usuario/index-usuario.component';
+import { IndexAdministradorComponent } from './index-administrador/index-administrador.component';
+import { IndexCapitanComponent } from './index-capitan/index-capitan.component';
+import { IndexArbitroComponent } from './index-arbitro/index-arbitro.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +35,18 @@ import { InscripcionesComponent } from './inscripciones/inscripciones.component'
     ContactoComponent,
     HomeComponent,
     ResultadosComponent,
-    InscripcionesComponent
+    InscripcionesComponent,
+    LoginComponent,
+    IndexUsuarioComponent,
+    IndexAdministradorComponent,
+    IndexCapitanComponent,
+    IndexArbitroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
